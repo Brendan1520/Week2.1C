@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2.1C</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+
+<body>
+    <div id="exploration">
+        <h1>Explorations</h1>
+        <h4>Made by me</h4>
+
+        <button @click="movemessage">Message</button>
+        <!--Conditional rendering to show messages using the v-if and v-else-->
+        <p v-if="messagevisible">Message Exposed!!!</p>
+
+        <p v-else>It was a Blip!</p>
+
+        <button @click="movemessage2">Message</button>
+        <!--Conditional rendering through v-show-->
+        <p v-show="switchmessage2">Hi there!!!</p>
+
+        <!--Lisitng numbers using the v-for and v-if-->
+
+        <h2>Listing</h2>
+        <ul>
+            <li v-for="num in numbers" v-if="num >= 2 && num <= 5">In the range</li>
+            <p v-else>Not in range</p>
+            
+        </ul>
+        <!--Binding with the v-model-->
+        <h2>forms</h2>
+        <input type="text" v-model="name" placeholder="your name">
+        <p>Hello, {{ name }}</p>
+    </div>
+
+    <p>-----------------------------------------------------------------------------</p>
+   
+    
+    <div id="todoApp">
+        <h1>The Todo App</h1>
+        <!--This is the Input used to create new todo's-->
+        <input type="text" v-model="todo1" placeholder="Tell me">
+
+       <!--Button to process the todo and -->
+        <button @click="addtodo">Cook</button>
+        <!--v-if and v-else, show the count of todo's if greater than 0-->
+        <p v-if="todos.length === 0">No todo's</p>
+        <p v-else-if="todos.length > 0">There are {{todos.length}} Todo's</p>
+
+        <!--The table the todos will be inserted to-->
+
+        <table>
+            <tr>
+                <th>Todo</th>
+                <th>Description</th>
+            </tr>
+
+            <!--looping through the todo's-->
+
+            <tr v-for="(todo,index) in todos">
+                <td>{{todos.text}}</td>
+                <td><button @click="deletetodo(index)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+
+    
+
+   <!--Connecting to Vue-->
+    <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.js"></script>
+    <!--connecting to javascript-->
+    <script src="app.js"></script>
+
+    
+</body>
+</html>

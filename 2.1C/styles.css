@@ -1,0 +1,67 @@
+/* The body design of the two apps exploration and todoApp*/
+#exploration, #todoApp {
+    background-color:aquamarine;
+    Padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px; float: none;
+   
+}
+
+
+
+body {
+    font-family:'Segoe UI';
+    background-color:antiquewhite;
+    margin: 0;
+    padding: 0;
+    height: 70%;
+    display:flex;
+    align-items: center;
+    
+   
+}
+
+
+
+h1{
+    text-align: center;
+    color:blue;
+}
+
+input[type="text"] {
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px;
+    
+}
+
+button:hover {
+    background-color:darkorange;
+    
+}
+
+button {
+    Padding: 10px;
+    border-radius: 5px;
+    font-size: medium;
+}
+
+table {
+    border-color:brown;
+    width: 100%;
+}
+
+th, td {
+    border: 2px solid;
+    padding: 10px 15px;
+}
+
+th {
+    background-color:blueviolet
+}
+
+td:hover {
+    background-color:blueviolet;
+}
