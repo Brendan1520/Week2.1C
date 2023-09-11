@@ -10,7 +10,7 @@ const todoApp = Vue.createApp({
         addtodo() {
                          /*Check for no whitespace */
 
-            if(this.todo1.trim() !== '') {
+            if(this.todo1 !== '') {
                 this.todos.push({text: this.todo1.trim()});
              /*Reset the Input */
                 this.todo1='';
