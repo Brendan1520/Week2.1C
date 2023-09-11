@@ -8,9 +8,11 @@ const todoApp = Vue.createApp({
     },
     methods: {
         addtodo() {
+                         /*Check for no whitespace */
+
             if(this.todo1.trim() !== '') {
                 this.todos.push({text: this.todo1.trim()});
-                
+             /*Reset the Input */
                 this.todo1='';
             }
         },
@@ -32,6 +34,8 @@ const exploration = Vue.createApp({
         };
     },
     methods: {
+    /*Change visibilities */
+
     movemessage() {
         this.messagevisible = !this.messagevisible;
 
